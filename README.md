@@ -1,2 +1,2 @@
 # laravel-react-mix
-Laravel integration with React.jus
+Laravel integration with React.js
