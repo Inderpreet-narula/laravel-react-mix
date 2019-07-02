@@ -9,7 +9,6 @@
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <h2 style="text-align: center">Laravel and React application</h2>
         <div id="root"></div>
         <script src="{{asset('js/app.js')}}"></script>
     </body>
