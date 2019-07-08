@@ -32242,6 +32242,131 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
+/***/ "./resources/js/components/FormElements/FormElements.styles.js":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/FormElements/FormElements.styles.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  inputWrap: {
+    display: 'flex'
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/components/FormElements/InputField.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/FormElements/InputField.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/lib/index.js");
+/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _FormElements_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormElements.styles */ "./resources/js/components/FormElements/FormElements.styles.js");
+
+
+
+
+var InputField = function InputField(props) {
+  var type = props.type,
+      placeholder = props.placeholder,
+      label = props.label,
+      classes = props.classes,
+      value = props.value,
+      editStatus = props.editStatus,
+      _onChange = props.onChange,
+      name = props.name,
+      showLabel = props.showLabel;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.inputWrap
+  }, showLabel && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, label), editStatus ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: name,
+    type: type,
+    placeholder: placeholder,
+    value: value,
+    onChange: function onChange(e) {
+      return _onChange(e);
+    }
+  }) : value);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (react_jss__WEBPACK_IMPORTED_MODULE_1___default()(_FormElements_styles__WEBPACK_IMPORTED_MODULE_2__["default"])(InputField));
+
+/***/ }),
+
+/***/ "./resources/js/components/FormElements/Textarea.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/FormElements/Textarea.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/lib/index.js");
+/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _FormElements_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormElements.styles */ "./resources/js/components/FormElements/FormElements.styles.js");
+
+
+
+
+var Textarea = function Textarea(props) {
+  var type = props.type,
+      placeholder = props.placeholder,
+      label = props.label,
+      classes = props.classes,
+      value = props.value,
+      editStatus = props.editStatus,
+      _onChange = props.onChange,
+      name = props.name;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.inputWrap
+  }, label && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, label), editStatus ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    placeholder: placeholder,
+    name: name,
+    value: value,
+    onChange: function onChange(e) {
+      return _onChange(e);
+    }
+  }) : value);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (react_jss__WEBPACK_IMPORTED_MODULE_1___default()(_FormElements_styles__WEBPACK_IMPORTED_MODULE_2__["default"])(Textarea));
+
+/***/ }),
+
+/***/ "./resources/js/components/FormElements/index.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/FormElements/index.js ***!
+  \*******************************************************/
+/*! exports provided: InputField, Textarea */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _InputField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InputField */ "./resources/js/components/FormElements/InputField.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InputField", function() { return _InputField__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _Textarea__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Textarea */ "./resources/js/components/FormElements/Textarea.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Textarea", function() { return _Textarea__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Profile/BasicInfo.js":
 /*!******************************************************!*\
   !*** ./resources/js/components/Profile/BasicInfo.js ***!
@@ -32257,56 +32382,130 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _BasicInfo_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BasicInfo.styles */ "./resources/js/components/Profile/BasicInfo.styles.js");
 /* harmony import */ var _utils_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/context */ "./resources/js/utils/context/index.js");
+/* harmony import */ var _components_FormElements__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/FormElements */ "./resources/js/components/FormElements/index.js");
+
 
 
 
 
 
 var BasicInfo = function BasicInfo(props) {
-  var classes = props.classes;
+  var classes = props.classes,
+      editStatus = props.editStatus;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_utils_context__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref) {
-    var profileInfo = _ref.profileInfo;
+    var profileInfo = _ref.profileInfo,
+        updateProfileInfo = _ref.updateProfileInfo;
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.profileBasicInfo
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.profileType
-    }, profileInfo.type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_4__["InputField"], {
+      label: "How many systems & data Experts work for your consultancy? *",
+      type: "text",
+      value: profileInfo.type,
+      name: "type",
+      editStatus: editStatus,
+      onChange: function onChange(e) {
+        return updateProfileInfo(e);
+      },
+      showLabel: editStatus
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.profileList
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }, !editStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "https://measurematch.herokuapp.com/images/no-of-experts.svg",
       alt: "ic_experts",
       className: classes.profileInfoIcon
-    }), profileInfo.experts, " Experts"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_4__["InputField"], {
+      label: "How many systems & data Experts work for your consultancy? *",
+      type: "text",
+      value: profileInfo.experts,
+      name: "experts",
+      editStatus: editStatus,
+      onChange: function onChange(e) {
+        return updateProfileInfo(e);
+      },
+      showLabel: editStatus
+    }), !editStatus && 'Experts'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.profileList
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }, !editStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "https://measurematch.herokuapp.com/images/ic_tag.svg",
       alt: "ic_tag",
       className: classes.profileInfoIcon
-    }), profileInfo.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_4__["InputField"], {
+      label: "Your MeasureMatch profile title *",
+      type: "text",
+      value: profileInfo.title,
+      name: "title",
+      editStatus: editStatus,
+      onChange: function onChange(e) {
+        return updateProfileInfo(e);
+      },
+      showLabel: editStatus
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.profileList
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }, !editStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "https://measurematch.herokuapp.com/images/ic_location.svg",
       alt: "location-icon",
       className: classes.profileInfoIcon
-    }), profileInfo.location), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_4__["InputField"], {
+      label: "Your location (city) *",
+      type: "text",
+      value: profileInfo.location,
+      name: "location",
+      editStatus: editStatus,
+      onChange: function onChange(e) {
+        return updateProfileInfo(e);
+      },
+      showLabel: editStatus
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.profileList
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }, !editStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "https://measurematch.herokuapp.com/images/dollarBill_ic.svg",
       alt: "dollarBill_ic",
       className: classes.profileInfoIcon
-    }), "US $", profileInfo.dailyRate, "/day"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), !editStatus && 'US $', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_4__["InputField"], {
+      label: "Your Daily Rate *",
+      type: "text",
+      value: profileInfo.dailyRate,
+      name: "dailyRate",
+      editStatus: editStatus,
+      onChange: function onChange(e) {
+        return updateProfileInfo(e);
+      },
+      showLabel: editStatus
+    }), !editStatus && '/day'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.profileList
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }, !editStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "https://measurematch.herokuapp.com/images/work_remotely.png",
       alt: "ic_remote_working",
       className: classes.profileInfoIcon
-    }), profileInfo.preference), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_4__["InputField"], {
+      label: "Location preference *",
+      type: "text",
+      value: profileInfo.preference,
+      name: "preference",
+      editStatus: editStatus,
+      onChange: function onChange(e) {
+        return updateProfileInfo(e);
+      },
+      showLabel: editStatus
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.profileList
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    }, !editStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: "https://measurematch.herokuapp.com/images/linkedin-icon.svg",
       alt: "ic_remote_working",
       className: classes.profileInfoIcon
-    }), profileInfo.linkedinUrl));
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_4__["InputField"], {
+      label: "Location preference *",
+      type: "text",
+      value: profileInfo.linkedinUrl,
+      name: "linkedinUrl",
+      editStatus: editStatus,
+      onChange: function onChange(e) {
+        return updateProfileInfo(e);
+      },
+      showLabel: editStatus
+    })));
   });
 };
 
@@ -32422,10 +32621,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/TabPanel/Tab.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/TabPanel/Tab.js ***!
-  \*************************************************/
+/***/ "./resources/js/components/TabPanel/Tab.component.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/TabPanel/Tab.component.js ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -32446,7 +32645,7 @@ var Tab = function Tab(props) {
       activeTab = props.activeTab,
       setTab = props.setTab;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: activeTab === label ? classes.tabListActive : classes.tabListItem,
+    className: activeTab ? classes.tabListActive : classes.tabListItem,
     onClick: function onClick() {
       return setTab(label);
     }
@@ -32471,7 +32670,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/lib/index.js");
 /* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _TabPanel_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TabPanel.styles */ "./resources/js/components/TabPanel/TabPanel.styles.js");
-/* harmony import */ var _Tab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Tab */ "./resources/js/components/TabPanel/Tab.js");
+/* harmony import */ var _Tab_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Tab.component */ "./resources/js/components/TabPanel/Tab.component.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -32494,31 +32693,26 @@ var TabPanel = function TabPanel(props) {
       activeTab = _useState2[0],
       setActiveTab = _useState2[1];
 
-  function handleClick(tab) {
-    console.log(tab);
-    return setActiveTab(tab);
-  }
-
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.tabs
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
     className: classes.tabList
   }, children.map(function (child) {
     var label = child.props.label;
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tab__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      activeTab: activeTab,
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tab_component__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      activeTab: activeTab === label,
       key: label,
       label: label,
-      setTab: handleClick
+      setTab: function setTab(tab) {
+        return setActiveTab(tab);
+      }
     });
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.tabContent
-  }, children.map(function (child) {
-    if (child.props.label !== activeTab) {
-      return undefined;
-    } else {
-      return child.props.children;
-    }
+  }, children.filter(function (child) {
+    return child.props.label === activeTab;
+  }).map(function (child) {
+    return child.props.children;
   })));
 };
 
@@ -32537,22 +32731,28 @@ var TabPanel = function TabPanel(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   tabList: {
-    borderBottom: '1px solid #ccc',
-    paddingLeft: 0,
+    padding: '0 15px',
     display: 'flex',
-    listStyle: 'none'
+    listStyle: 'none',
+    boxShadow: '0 2px 4px 0 rgba(0, 0, 0, .12)'
   },
   tabListItem: {
     display: 'inline-block',
     listStyle: 'none',
-    marginBottom: '-1px',
-    padding: '0.5rem 0.75rem',
-    cursor: 'pointer'
+    lineHeight: '19px',
+    color: '#444',
+    padding: '12px 13px',
+    fontSize: '17px',
+    borderBottom: '#fff solid 2px'
   },
   tabListActive: {
-    backgroundColor: 'white',
-    border: 'solid #ccc',
-    borderWidth: '1px 1px 0 1px'
+    display: 'inline-block',
+    listStyle: 'none',
+    lineHeight: '19px',
+    color: '#444',
+    padding: '12px 13px',
+    fontSize: '17px',
+    borderBottom: '#424242 solid 2px'
   }
 });
 
@@ -32593,6 +32793,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/context */ "./resources/js/utils/context/index.js");
 /* harmony import */ var _components_Profile__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Profile */ "./resources/js/components/Profile/index.js");
 /* harmony import */ var _components_TabPanel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/TabPanel */ "./resources/js/components/TabPanel/index.js");
+/* harmony import */ var _components_FormElements__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/FormElements */ "./resources/js/components/FormElements/index.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -32600,6 +32805,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -32616,9 +32822,24 @@ var ProfileComponent = function ProfileComponent(props) {
       profileInfo = _useState2[0],
       setprofileInfo = _useState2[1];
 
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      profileEditStatus = _useState4[0],
+      setProfileEditStatus = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      profileSummaryEditStatus = _useState6[0],
+      setProfileSummaryEditStatus = _useState6[1];
+
+  var updateProfileInfo = function updateProfileInfo(e) {
+    setprofileInfo(_objectSpread({}, profileInfo, _defineProperty({}, e.target.name, e.target.value)));
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_utils_context__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
     value: {
-      profileInfo: profileInfo
+      profileInfo: profileInfo,
+      updateProfileInfo: updateProfileInfo
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.profileContainer
@@ -32626,15 +32847,59 @@ var ProfileComponent = function ProfileComponent(props) {
     className: classes.profileLeft
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.profileName
-  }, profileInfo.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Profile__WEBPACK_IMPORTED_MODULE_5__["ProfilePic"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Profile__WEBPACK_IMPORTED_MODULE_5__["BasicInfo"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, profileInfo.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Profile__WEBPACK_IMPORTED_MODULE_5__["ProfilePic"], null), !profileEditStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return setProfileEditStatus(true);
+    }
+  }, "Edit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Profile__WEBPACK_IMPORTED_MODULE_5__["BasicInfo"], {
+    editStatus: profileEditStatus
+  }), profileEditStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return setProfileEditStatus(false);
+    }
+  }, "Save")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.profileRight
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TabPanel__WEBPACK_IMPORTED_MODULE_6__["TabPanel"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    label: "Gator"
-  }, "See ya later, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("em", null, "Alligator"), "!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    label: "Croc"
-  }, "After 'while, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("em", null, "Crocodile"), "!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    label: "Sarcosuchus"
-  }, "Nothing to see here, this tab is ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("em", null, "extinct"), "!")))));
+    label: "Summary"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.tabContent
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: classes.tabHeading
+  }, "Your Story"), !profileSummaryEditStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return setProfileSummaryEditStatus(true);
+    }
+  }, "Edit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_7__["Textarea"], {
+    placeholder: "Your Story",
+    name: "summary",
+    editStatus: profileSummaryEditStatus,
+    value: profileInfo.summary,
+    onChange: function onChange(e) {
+      return updateProfileInfo(e);
+    }
+  }), profileSummaryEditStatus && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return setProfileSummaryEditStatus(false);
+    }
+  }, "Save"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    label: "Skills"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.tabContent
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: classes.tabHeading
+  }, "Skills"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    label: "Work History"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.tabContent
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: classes.tabHeading
+  }, "Work History"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    label: "Education"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.tabContent
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: classes.tabHeading
+  }, "Education")))))));
 };
 /* harmony default export */ __webpack_exports__["default"] = (react_jss__WEBPACK_IMPORTED_MODULE_1___default()(_Profile_styles__WEBPACK_IMPORTED_MODULE_2__["default"])(ProfileComponent));
 
@@ -32644,27 +32909,22 @@ var ProfileComponent = function ProfileComponent(props) {
 /*!**************************************************************!*\
   !*** ./resources/js/containers/Profile/Profile.container.js ***!
   \**************************************************************/
-/*! exports provided: Profile, default */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Profile", function() { return Profile; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/lib/index.js");
-/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Profile_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Profile.styles */ "./resources/js/containers/Profile/Profile.styles.js");
-/* harmony import */ var _Profile_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Profile.component */ "./resources/js/containers/Profile/Profile.component.js");
-
+/* harmony import */ var _Profile_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Profile.component */ "./resources/js/containers/Profile/Profile.component.js");
 
 
 
 var Profile = function Profile(props) {
-  var classes = props.classes;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Profile_component__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Profile_component__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
-/* harmony default export */ __webpack_exports__["default"] = (react_jss__WEBPACK_IMPORTED_MODULE_1___default()(_Profile_styles__WEBPACK_IMPORTED_MODULE_2__["default"])(Profile));
+
+/* harmony default export */ __webpack_exports__["default"] = (Profile);
 
 /***/ }),
 
@@ -32709,6 +32969,18 @@ __webpack_require__.r(__webpack_exports__);
     borderRadius: '2px 2px 0 0',
     borderBottom: '#F9F9F9 solid 1px',
     marginBottom: '3px'
+  },
+  tabContent: {
+    padding: '20px'
+  },
+  tabHeading: {
+    fontSize: '17px',
+    marginBottom: '10px',
+    width: '100%',
+    borderBottom: '1px solid rgba(68, 68, 68, .15)',
+    paddingBottom: '10px',
+    color: '#3E3C36',
+    lineHeight: '24px'
   }
 });
 
@@ -32731,7 +33003,8 @@ var ProfileContent = {
   "location": "Mohali, Punjab, India",
   "dailyRate": 1500,
   "preference": "Only work on site",
-  "linkedinUrl": "https://www.linkedin.com/in/tarun-sharma-b97b2966/"
+  "linkedinUrl": "https://www.linkedin.com/in/tarun-sharma-b97b2966/",
+  "summary": "Software testing is defined as an activity to check whether the actual results match the expected results and to ensure that the software system is Defect free. It involves execution of a software component or system component to evaluate one or more properties of interest."
 };
 /* harmony default export */ __webpack_exports__["default"] = (ProfileContent);
 
@@ -32765,7 +33038,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-var ProfileContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
+var ProfileContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
+  updateProfileInfo: function updateProfileInfo() {}
+});
 /* harmony default export */ __webpack_exports__["default"] = (ProfileContext);
 
 /***/ }),

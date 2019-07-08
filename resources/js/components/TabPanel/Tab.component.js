@@ -6,7 +6,7 @@ import styles from './TabPanel.styles';
 const Tab = (props) => {
     const { label, classes, activeTab, setTab } = props;  
       return (
-        <li className={activeTab === label ? classes.tabListActive : classes.tabListItem} onClick={() => setTab(label)}>
+        <li className={activeTab ? classes.tabListActive : classes.tabListItem} onClick={() => setTab(label)}>
             {label}
         </li>
       )};

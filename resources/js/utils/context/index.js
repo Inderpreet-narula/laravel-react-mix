@@ -1,5 +1,7 @@
 import React from "react";
 
-const ProfileContext = React.createContext();
+const ProfileContext = React.createContext({
+    updateProfileInfo : () => {},
+});
 
 export default ProfileContext;

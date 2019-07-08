@@ -1,23 +1,28 @@
 export default {
     tabList: {
-        borderBottom: '1px solid #ccc',
-        paddingLeft: 0,
+        padding: '0 15px',
         display: 'flex',
-        listStyle: 'none'
+        listStyle: 'none',
+        boxShadow: '0 2px 4px 0 rgba(0, 0, 0, .12)',
     },
     tabListItem: {
         display: 'inline-block',
         listStyle: 'none',
-        marginBottom: '-1px',
-        padding: '0.5rem 0.75rem',
-        cursor: 'pointer',
+        lineHeight: '19px',
+        color: '#444',
+        padding: '12px 13px',
+        fontSize: '17px',
+        borderBottom: '#fff solid 2px'
       },
       
     tabListActive:  {
-        backgroundColor: 'white',
-        border: 'solid #ccc',
-        borderWidth: '1px 1px 0 1px',
-    }
-      
+        display: 'inline-block',
+        listStyle: 'none',
+        lineHeight: '19px',
+        color: '#444',
+        padding: '12px 13px',
+        fontSize: '17px',
+        borderBottom: '#424242 solid 2px'
+    },      
 }
    

@@ -31,5 +31,17 @@ export default {
       borderBottom: '#F9F9F9 solid 1px',
       marginBottom: '3px',
    },
+   tabContent : {
+      padding: '20px',
+   },
+   tabHeading: {
+      fontSize: '17px',
+      marginBottom: '10px',
+      width:'100%',
+      borderBottom: '1px solid rgba(68, 68, 68, .15)',
+      paddingBottom: '10px',
+      color: '#3E3C36',
+      lineHeight: '24px',
+  }
 }
   

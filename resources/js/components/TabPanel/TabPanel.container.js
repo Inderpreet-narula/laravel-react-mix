@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import withStyles from 'react-jss';
 import styles from './TabPanel.styles';
-import Tab from './Tab';
+import Tab from './Tab.component';
 
 
 const TabPanel = (props) => {
     const { children, classes } = props;
     const [activeTab, setActiveTab] = useState(props.children[0].props.label)
-    function handleClick(tab) {
-      console.log(tab)
-      return setActiveTab(tab);
-    }
       return (
         <div className={classes.tabs}>
           <ol className={classes.tabList}>
@@ -18,23 +14,16 @@ const TabPanel = (props) => {
               const { label } = child.props;
               return (
                 <Tab
-                  activeTab={activeTab}
+                  activeTab={activeTab === label}
                   key={label}
                   label={label}
-                  setTab={handleClick}
+                  setTab={(tab) => setActiveTab(tab)}
                 />
               );
             })}
           </ol>
           <div className={classes.tabContent}>
-            {children.map((child) => {
-              if (child.props.label !== activeTab) {
-                return undefined;
-              } else {
-                return child.props.children;
-              }
-              
-            })}
+            {children.filter((child) => child.props.label === activeTab).map((child) => child.props.children)}
           </div>
         </div>
       )};

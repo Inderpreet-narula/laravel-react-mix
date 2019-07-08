@@ -1,10 +1,7 @@
 import React from 'react';
-import withStyles from 'react-jss';
-import styles from './Profile.styles';
 import ProfileComponent from './Profile.component';
 
-export const Profile = (props) => { 
-    const { classes} = props;
+const Profile = (props) => { 
     return(
         <div>
             <ProfileComponent />
@@ -12,4 +9,4 @@ export const Profile = (props) => {
     );
 };
 
-export default withStyles(styles)(Profile);
+export default Profile;
