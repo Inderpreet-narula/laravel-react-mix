@@ -32254,6 +32254,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   inputWrap: {
     display: 'flex'
+  },
+  inputTagWrapper: {
+    background: 'white',
+    border: '1px solid #d6d6d6',
+    borderRadius: '2px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    padding: '5px 5px 0'
+  },
+  input: {
+    border: 'none',
+    width: '100%'
+  },
+  inputTagList: {
+    display: 'inline-flex',
+    flexWrap: 'wrap',
+    margin: '0',
+    padding: '0',
+    width: '100%'
+  },
+  inputTag: {
+    alignItems: 'center',
+    background: '#85A3BF',
+    borderRadius: '2px',
+    color: 'white',
+    display: 'flex',
+    fontWeight: '300',
+    listStyle: 'none',
+    marginBottom: '5px',
+    marginRight: '5px',
+    padding: '5px 10px'
+  },
+  inputTagRemove: {
+    alignItems: 'center',
+    appearance: 'none',
+    background: '#333333',
+    border: 'none',
+    borderRadius: '50%',
+    color: 'white',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    fontSize: '12px',
+    height: '15px',
+    justifyContent: 'center',
+    lineHeight: '0',
+    marginLeft: '8px',
+    transform: 'rotate(45deg)',
+    width: '15px'
+  },
+  inputTagNew: {
+    background: 'none',
+    flexGrow: '1',
+    padding: '0'
   }
 });
 
@@ -32304,6 +32357,58 @@ var InputField = function InputField(props) {
 
 /***/ }),
 
+/***/ "./resources/js/components/FormElements/InputTag.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/FormElements/InputTag.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-jss */ "./node_modules/react-jss/lib/index.js");
+/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _FormElements_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormElements.styles */ "./resources/js/components/FormElements/FormElements.styles.js");
+
+
+
+
+var InputTag = function InputTag(props) {
+  var classes = props.classes,
+      onTagChage = props.onTagChage,
+      removeTagHandler = props.removeTagHandler,
+      tags = props.tags;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.inputTagWrapper
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: classes.inputTagList
+  }, tags.map(function (tag, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: tag.id,
+      className: classes.inputTag
+    }, tag.name, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      className: classes.inputTagRemove,
+      onClick: function onClick() {
+        removeTagHandler(i);
+      }
+    }, "+"));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: classes.inputTagNew
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    onKeyDown: function onKeyDown(e) {
+      onTagChage(e);
+    }
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (react_jss__WEBPACK_IMPORTED_MODULE_1___default()(_FormElements_styles__WEBPACK_IMPORTED_MODULE_2__["default"])(InputTag));
+
+/***/ }),
+
 /***/ "./resources/js/components/FormElements/Textarea.js":
 /*!**********************************************************!*\
   !*** ./resources/js/components/FormElements/Textarea.js ***!
@@ -32351,7 +32456,7 @@ var Textarea = function Textarea(props) {
 /*!*******************************************************!*\
   !*** ./resources/js/components/FormElements/index.js ***!
   \*******************************************************/
-/*! exports provided: InputField, Textarea */
+/*! exports provided: InputField, Textarea, InputTag */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32361,6 +32466,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _Textarea__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Textarea */ "./resources/js/components/FormElements/Textarea.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Textarea", function() { return _Textarea__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _InputTag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./InputTag */ "./resources/js/components/FormElements/InputTag.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InputTag", function() { return _InputTag__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
 
 
 
@@ -32836,6 +32945,28 @@ var ProfileComponent = function ProfileComponent(props) {
     setprofileInfo(_objectSpread({}, profileInfo, _defineProperty({}, e.target.name, e.target.value)));
   };
 
+  var removeTag = function removeTag(i) {
+    var newTags = profileInfo.skills;
+    newTags.splice(i, 1);
+    setprofileInfo(_objectSpread({}, profileInfo, {
+      skills: newTags
+    }));
+  };
+
+  var inputKeyDown = function inputKeyDown(e) {
+    console.log(e.target.value);
+    var val = e.target.value;
+    var newTags = profileInfo.skills;
+    var newVal = {
+      id: profileInfo.skills.length,
+      name: val
+    };
+    newTags.push(newVal);
+    setprofileInfo(_objectSpread({}, profileInfo, {
+      skills: newTags
+    }));
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_utils_context__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
     value: {
       profileInfo: profileInfo,
@@ -32887,7 +33018,15 @@ var ProfileComponent = function ProfileComponent(props) {
     className: classes.tabContent
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: classes.tabHeading
-  }, "Skills"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Strategic & Advisory Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormElements__WEBPACK_IMPORTED_MODULE_7__["InputTag"], {
+    tags: profileInfo.skills,
+    onTagChage: function onTagChage(e) {
+      return inputKeyDown(e);
+    },
+    removeTagHandler: function removeTagHandler(e) {
+      return removeTag(e);
+    }
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     label: "Work History"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.tabContent
@@ -33004,7 +33143,14 @@ var ProfileContent = {
   "dailyRate": 1500,
   "preference": "Only work on site",
   "linkedinUrl": "https://www.linkedin.com/in/tarun-sharma-b97b2966/",
-  "summary": "Software testing is defined as an activity to check whether the actual results match the expected results and to ensure that the software system is Defect free. It involves execution of a software component or system component to evaluate one or more properties of interest."
+  "summary": "Software testing is defined as an activity to check whether the actual results match the expected results and to ensure that the software system is Defect free. It involves execution of a software component or system component to evaluate one or more properties of interest.",
+  "skills": [{
+    id: 1,
+    name: "Apples"
+  }, {
+    id: 2,
+    name: "Pears"
+  }]
 };
 /* harmony default export */ __webpack_exports__["default"] = (ProfileContent);
 

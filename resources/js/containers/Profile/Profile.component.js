@@ -5,8 +5,7 @@ import ProfileContent from './ProfileContent';
 import ProfileContext from "../../utils/context";
 import { BasicInfo, ProfilePic } from '../../components/Profile';
 import { TabPanel } from '../../components/TabPanel';
-import { Textarea } from '../../components/FormElements';
-
+import { Textarea, InputTag } from '../../components/FormElements';
 export const ProfileComponent = (props) => { 
     const { classes} = props;
     const [profileInfo, setprofileInfo] = useState(ProfileContent);
@@ -19,6 +18,29 @@ export const ProfileComponent = (props) => {
         });
        
     };
+    const removeTag = (i) => {
+        const newTags = profileInfo.skills;
+        newTags.splice(i, 1);
+        setprofileInfo({
+            ...profileInfo,
+            skills: newTags,
+        });
+      }
+    
+      const inputKeyDown = (e) => {
+          console.log(e.target.value)
+        const val = e.target.value;
+        const newTags = profileInfo.skills;
+        const newVal = {
+            id: profileInfo.skills.length,
+            name: val,
+        }
+        newTags.push(newVal);
+        setprofileInfo({
+            ...profileInfo,
+            skills: newTags,
+        });
+    }
 
     return(
         <ProfileContext.Provider value={{ profileInfo, updateProfileInfo}}>
@@ -50,8 +72,13 @@ export const ProfileComponent = (props) => {
                 </div>
                 <div label="Skills">
                 <div className={classes.tabContent}>
-                        <h3 className={classes.tabHeading}>Skills</h3> 
-                    </div>
+                        <h3 className={classes.tabHeading}>Strategic &amp; Advisory Skills</h3>
+                        <InputTag 
+                            tags={profileInfo.skills} 
+                            onTagChage={(e) => inputKeyDown(e)} 
+                            removeTagHandler={(e) => removeTag(e)}
+                         />
+                </div>
                 </div>
                 <div label="Work History">
                     <div className={classes.tabContent}>
